@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Loan Repayment Calculator - Javascript TMA</title>
+		<script type="text/javascript" src="loancalculator.js">
+		</script>
+		<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1" />
+		<link rel="stylesheet" type="text/css" href="main.css" />
+	</head>
+	<body>
+    <div id="header"><h1>Loan Repayment Calculator</h1></div>
+    <div id="mainwrapper">
+		<form id="calculator_form" action="">
+			<div id="welcomeText" class="mainblocks">
+				<p>
+Please enter  details  to calculate your loan repayments. Minimum amount must be  £1,000  and must be repaid over  1 to 25 years. Select w loan protection insurance or not.
+</p>
+			</div>
+			<div id="loanAmountBlock" class="mainblocks">
+				<label for="loan">How much do you want to borrow?</label>
+			</div>
+			<div class="mainblocks">
+				<input type="text" id="loan" class="inputbox" /> (£)
+			</div>
+			<div id="loanAdvice" class="adviceHidden">
+			You need to put in a value greater than £1000.
+			</div>
+			<div id="loanPeriodBlock" class="mainblocks">
+				<label for="period">How long do you want to repay the loan?</label>
+			</div>
+			<div class="mainblocks">
+				<input type="text" id="period"  class="inputbox" /> (years)
+			</div>
+			<div id="periodAdvice" class="adviceHidden">
+			You need to put in a value in from 1 to 25 years.
+			</div>
+			<div class="mainblocks">
+				<label for="protected">Would you like loan protection?</label>
+			</div>
+			<div class="mainblocks">
+				<select name="protected" id="protected">
+					<option value="protected_yes">I have loan protection</option>
+					<option value="protected_no">I do not have loan protection</option>
+				</select>
+			</div>
+			<div class="mainblocks">
+			<input type="button" value="Calculate loan" onclick="buttonClicked();" />
+            <input type="button" value="Reset" onclick="formReset(); resetFormat();" />
+			</div>
+		</form>
+		
+        
+        <div id="results">
+     <ul>
+       <li>
+              Interest rate:
+         <span id="output1"></span>
+       </li>
+       <li>
+              Total interest:
+       <span id="output2"></span>
+       </li>
+       <li>
+             Total amount of loan:
+       <span id="output3"></span>
+       </li>
+       <li>
+              Monthly payment:
+       <span id="output4"></span>
+       </li>
+       </ul>
+       </div>
+       </div>
+      <div id="footer"><p>Copyright &#169; Marcin Ruta TMA Javascript</p></div>
+ </body>
+</html>
